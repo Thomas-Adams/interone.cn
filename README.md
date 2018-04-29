@@ -18,6 +18,10 @@ On the command line do following:
 
 * ```bower install```
 
+* ```npm start```
+
+* ```call http://localhost:3000/ in your favorite browser```
+
 Content
 -----------
 
