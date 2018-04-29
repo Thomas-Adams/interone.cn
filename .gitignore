@@ -72,3 +72,5 @@ public/_media/videos/
 
 /public/_common/js/vendor/
 /node_modules/
+/package-lock.json
+package-lock.json
