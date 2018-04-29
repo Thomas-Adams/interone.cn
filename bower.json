@@ -1,0 +1,22 @@
+{
+  "name": "interone.cn",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Thomas-Adams <heinrich.adams@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Thomas-Adams/interone.cn",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/_common/js/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}

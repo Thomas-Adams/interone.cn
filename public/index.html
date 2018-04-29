@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Interone China</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="_common/css/bootstrap.css"/>
+    <link rel="stylesheet" href="_common/css/styles.css"/>
+    <script src="_common/js/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="_common/js/vendor/popper.js/dist/popper.js"></script>
+    <script src="_common/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://ditu.google.cn/maps/api/js?sensor=false&language=zh"></script>
+    <script>
+        function initializeBeijingMap() {
+            var myLatlng = new google.maps.LatLng(39.913141, 116.459181),
+                myOptions = {
+                    zoom: 14,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                },
+                map = new google.maps.Map(document.getElementById("map-beijing"), myOptions),
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                }),
+                contentString = '北京天一国际广告有限公司<br />'
+                    + '北京市朝阳区光华路丙12号数码01大厦1205-06室<br />'
+                    + '邮编：100020',
+                infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+
+        function initializeShanghaiMap() {
+            var myLatlng = new google.maps.LatLng(31.195146, 121.43786),
+                myOptions = {
+                    zoom: 14,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                },
+                map = new google.maps.Map(document.getElementById("map-shanghai"), myOptions),
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                }),
+                contentString = '北京天一国际广告有限公司(上海)<br />'
+                    + '上海市虹桥路1号港汇中心一座16层1607室',
+                infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+
+
+        $(document).ready(function(){
+            initializeBeijingMap();
+            initializeShanghaiMap();
+        });
+    </script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="video-container">
+        <video playsinline autoplay muted loop poster="_media/images/poster-beijing.jpg" id="background">
+            <source src="_media/videos/beijing.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<div class="container container-nav">
+    <nav class="navbar navbar-expand-md navbar-light bg-white navbar-interone">
+        <a class="navbar-brand" href="#">
+            <img src="_media/images/interone_logo.svg" width="100" alt="Logo Interone"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link nav-link-interone" href="#">Agency</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-interone" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-interone" href="#">Works</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-interone" href="#">Career</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-interone" href="#">News</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container home-page">
+    <div class="jumbotron bg-white text-center">
+        <h1 class="display-4 text-center">We are proud to be digital</h1>
+        <p class="lead">Wir sind eine Digitalagentur der ersten Stunde.
+            Wir verbinden die Herausforderungen von heute mit den Möglichkeiten von morgen.</p>
+        <p class="lead">Es geht immer um die Menschen, ihre Bedürfnisse, ihre Begeisterung.
+            Alle sind Always-On. Genau wie unsere digitalen Lösungen.</p>
+    </div>
+    <div class="jumbotron bg-white">
+        <h2 class="display-4 text-center">What's up</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="news-card-interone-1">
+                        </div>
+                        <div class="date-interone">2018年2月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW M角斗士之战</span></p>
+                            <p><span class="work">BMW M是BMW旗下的运动</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="news-card-interone-2">
+                        </div>
+                        <div class="date-interone">2018年3月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW“沙漠怪圈”</span></p>
+                            <p><span class="work">BMW M是BMW旗下的运动</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="news-card-interone-3">
+                        </div>
+                        <div class="date-interone">2018年4月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW短片造</span></p>
+                            <p><span class="work">势全新X5M和X6M</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron bg-white">
+        <h2 class="display-4 text-center">Our work</h2>
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="work-card-interone-1">
+                        </div>
+                        <div class="date-interone">2018年3月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW“沙漠怪圈”</span></p>
+                            <p><span class="work">BMW M是BMW旗下的运动</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="work-card-interone-2">
+                        </div>
+                        <div class="date-interone">2018年3月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW“沙漠怪圈”</span></p>
+                            <p><span class="work">BMW M是BMW旗下的运动</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="work-card-interone-3">
+                        </div>
+                        <div class="date-interone">2018年3月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW“沙漠怪圈”</span></p>
+                            <p><span class="work">BMW M是BMW旗下的运动</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12 mb-3">
+                <div class="card card-interone">
+                    <a class="news-teaser-interone" href="#">
+                        <div class="card-body" id="work-card-interone-4">
+                        </div>
+                        <div class="date-interone">2018年3月2日</div>
+                        <div class="card-teaser-interone">
+                            <p><span class="work-blue">BMW“沙漠怪圈”</span></p>
+                            <p><span class="work">BMW M是BMW旗下的运动</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron bg-white">
+        <h2 class="display-4 text-center">We look for you</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                <a class="job-teaser-interone" href="#">
+                    <div class="card card-interone">
+                        <div class="card-body" id="job-1">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                <a class="job-teaser-interone" href="#">
+                    <div class="card card-interone">
+                        <div class="card-body" id="job-2">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                <a class="job-teaser-interone" href="#">
+                    <div class="card card-interone">
+                        <div class="card-body" id="job-3">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid home-page bg-footer footer-interone-info">
+    <div class="jumbotron bg-transparent">
+        <div class="row">
+            <div class="col-lg-4 bg-white">
+                <div class="card footer-teaser-interone">
+                    <div class="card-header bg-white">
+                        <h3>Contact</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group come-to-us">
+                            <li>
+                                <p>
+                                    <a class="collapsed" data-toggle="collapse" href="#collapsePress" role="button"
+                                       aria-expanded="false" aria-controls="collapsePress">
+                                        Press
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapsePress">
+                                    <div class="address">
+                                        <p>Carsten Greiner</p>
+                                        <p>Email: <a href="mailto:carsten.greiner@interone.cn">carsten.greiner@interone.cn</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseBusiness" role="button"
+                                       aria-expanded="false" aria-controls="collapseBusiness">
+                                        New business
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseBusiness">
+                                    <div class="address">
+                                        <p>杨光</p>
+                                        <p>Email: <a href="mailto:eric.yang@interone.cn">eric.yang@interone.cn</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bg-white">
+                <div class="card footer-teaser-interone">
+                    <div class="card-header bg-white">
+                        <h3>Come to us</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group come-to-us">
+                            <li>
+                                <p>
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseBeijing" role="button"
+                                       aria-expanded="false" aria-controls="collapseBeijing">
+                                        北京办事处
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseBeijing">
+                                    <div class="address">
+                                        <p>北京市朝阳区光华路丙12号</p>
+                                        <p>数码01大厦1205-06室</p>
+                                    </div>
+                                    <div id="map-beijing" class="map"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseShanghai" role="button"
+                                       aria-expanded="false" aria-controls="collapseShanghai">
+                                        上海办事处
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseShanghai">
+                                    <div class="address">
+                                        <p>上海市虹桥路1号</p>
+                                        <p>港汇中心一座16层1607室</p>
+                                    </div>
+                                    <div id="map-shanghai" class="map"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bg-white">
+                <div class="card footer-teaser-interone">
+                    <div class="card-header bg-white">
+                        <h3>Follow us</h3>
+                    </div>
+                    <div class="card-body"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid home-page footer-interone bg-footer">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">北京天一国际广告有限公司 &copy; Copyright 2018</div>
+        <div class="col-lg-6 col-md-12 col-sm-12"><a href="http://www.miibeian.gov.cn/">京ICP备12011769号-1</a></div>
+    </div>
+</div>
+</body>
+</html>
